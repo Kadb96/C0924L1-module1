@@ -13,3 +13,5 @@ Begin
 	Output Amax
 End
 ```
+
+![Tim Max](./max-flowchart.png)
