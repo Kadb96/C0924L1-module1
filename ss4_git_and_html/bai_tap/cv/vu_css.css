@@ -1,0 +1,23 @@
+body {
+    font-family: "Times New Roman";
+    width: 1000px;
+    color: darkslategrey;
+}
+img {
+    border-radius: 50%;
+    width: 200px;
+    border: solid seagreen;
+}
+.grid-container-a {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+.grid-item-a-1 {
+    grid-row: 1 / 4;
+}
+.grid-item-a-2 {
+    text-align: center;
+}
+a:link, a:visited {
+    color: darkslategrey;
+}
