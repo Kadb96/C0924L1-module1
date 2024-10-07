@@ -14,4 +14,4 @@ Begin
 End
 ```
 
-![Tim Max](./max-flowchart.png)
+![Tim Max](./max-flowchart.p)
