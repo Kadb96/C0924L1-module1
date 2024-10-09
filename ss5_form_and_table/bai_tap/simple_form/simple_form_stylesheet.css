@@ -1,0 +1,19 @@
+body {
+    font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    font-size: 25px;
+}
+#order_form {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px 10px 10px 5px;
+}
+.order_form_text {
+    margin: 5px 5px 5px 5px;
+}
+.order_form_text_content {
+    font-size: 21px;
+    margin: 5px 5px 5px 5px;
+}
+.phone {
+    width: 70px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="simple_form_stylesheet.css">
+</head>
+<body>
+  <form method="get">
+    <label id="order_form">Order Form</label>
+    <br>
+    <label class="order_form_text" for="sku">What would you like to buy?</label>
+    <br>
+    <select class="order_form_text_content" id="sku">
+      <option>A</option>
+      <option>B (+ 0,5$)</option>
+      <option>C (+ 0,5$)</option>
+    </select>
+    <br>
+    <label class="order_form_text"> How many would you like to order?</label>
+      <br>
+      <input type="radio" id="quantity1" value="1 - $10" name="quantity">
+      <label class="order_form_text_content" for="quantity1">1 - $10</label><br>
+      <input type="radio" id="quantity2" value="2 - $20" name="quantity">
+      <label class="order_form_text_content" for="quantity2">2 - $20</label><br>
+      <input type="radio" id="quantity3" value="3 - $25" name="quantity">
+      <label class="order_form_text_content" for="quantity3">3 - $25</label><br>
+      <label class="order_form_text">Name</label><br>
+      <input type="text" placeholder="FirstName" class="order_form_text_content" id="first_name" name="first_name">
+      <input type="text" placeholder="LastName" class="order_form_text_content" id="last_name" name="last_name">
+      <br>
+      <label class="order_form_text">Email</label><br>
+      <input type="email" class="order_form_text_content"><br>
+      <label class="order_form_text">Phone Number</label><br>
+      <input class="order_form_text_content phone" type="number"><span class="order_form_text_content">-</span><input class="order_form_text_content phone" type="number"><span class="order_form_text_content">-</span><input class="order_form_text_content phone" type="number"><br>
+      <input class="order_form_text_content" type="submit">
+  </form>
+</body>
+</html>
