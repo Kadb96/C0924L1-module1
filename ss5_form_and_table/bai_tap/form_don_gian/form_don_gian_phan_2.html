@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form đơn giản phần 2</title>
+</head>
+<body>
+    <form>
+            <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+        <label for="name">Họ và tên:</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="date_of_birth">Ngày sinh:</label>
+        <input type="date" name="date_of_birth" id="date_of_birth"><br>
+        <span>Giới tính:</span>
+        <input type="radio" id="gender_male" name="gender" value="Nam"><label for="gender_male">Nam</label>
+        <input type="radio" id="gender_female" name="gender" value="Nữ"><label for="gender_female">Nữ</label><br>
+        <label for="address">Địa chỉ:</label>
+        <textarea id="address" name="address" cols="40" rows="2"></textarea><br>
+        <label for="class">Lớp:</label>
+        <select id="class" name="class">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Javascript">Javascript</option>
+            <option value="JAVA">JAVA</option>
+            <option value="SQL">SQL</option>
+        </select><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br>
+        <label for="phone">Điện thoại:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <input type="submit" value="Đăng ký">
+        <input type="reset" value="Nhập lại">
+    </form>
+</body>
+</html>
