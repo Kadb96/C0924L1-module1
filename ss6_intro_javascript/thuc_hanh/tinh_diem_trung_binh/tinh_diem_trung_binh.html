@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Điểm Trung Bình</title>
+</head>
+<body>
+<label for="toan">Điểm toán: </label>
+<input id="toan" type="number"><br>
+<label for="ly">Điểm lý: </label>
+<input id="ly" type="number"><br>
+<label for="hoa">Điểm hoá: </label>
+<input id="hoa" type="number"><br>
+<button onclick="tinhDiem()">Tính điểm trung bình</button>
+<script>
+    function tinhDiem() {
+        let toan = parseFloat(document.getElementById("toan").value);
+        let ly = parseFloat(document.getElementById("ly").value);
+        let hoa = parseFloat(document.getElementById("hoa").value);
+        const result = (toan + ly + hoa);
+        // debugger;
+        // let diemtb = Math.floor(result / 3);
+        let diemtb = result / 3.0;
+        alert("Điểm trung bình 3 môn là " + diemtb.toFixed(2));
+    }
+</script>
+</body>
+</html>
