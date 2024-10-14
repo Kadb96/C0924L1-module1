@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính cơ bản</title>
+</head>
+<body>
+<form method="get" action="#">
+    <fieldset>
+        <legend>Calculator</legend>
+        <input type="number" id="number" value="0">
+        <span id="current_mark"></span><br>
+        <button onclick="add_number1()">1</button>
+        <button onclick="add_number2()">2</button>
+        <button onclick="add_number3()">3</button><br>
+        <button onclick="add_number4()">4</button>
+        <button onclick="add_number5()">5</button>
+        <button onclick="add_number6()">6</button><br>
+        <button onclick="add_number7()">7</button>
+        <button onclick="add_number8()">8</button>
+        <button onclick="add_number9()">9</button><br>
+        <button onclick="add_number0()">0</button><br>
+        <button onclick="add_calculate_add()">+</button>
+        <button onclick="add_calculate_sub()">-</button>
+        <button onclick="add_calculate_mul()">X</button>
+        <button onclick="add_calculate_div()">/</button><br>
+        <button onclick="calculate_equal()" style="background-color: dodgerblue; color: white">=</button>
+    </fieldset>
+</form>
+<script>
+    let number = document.getElementById("number");
+    let currentMark = document.getElementById("current_mark");
+    let a;
+    function add_calculate() {
+        if (a == undefined) {
+            a = number.value;
+            number.value = 0;
+        }
+        else {
+            if (currentMark.innerText === "+") {number.value = parseInt(a) + parseInt(number.value);}
+            else if (currentMark.innerText === "-") {number.value = parseInt(a) - parseInt(number.value);}
+            else if (currentMark.innerText === "X") {number.value = parseInt(a) * parseInt(number.value);}
+            else if (currentMark.innerText === "/") {number.value = parseInt(a) / parseInt(number.value);}
+            a = number.value;
+        }
+    }
+    let b;
+    function add_number1() {number.value = number.value + 1;}
+    function add_number2() {number.value = number.value + 2;}
+    function add_number3() {number.value = number.value + 3;}
+    function add_number4() {number.value = number.value + 4;}
+    function add_number5() {number.value = number.value + 5;}
+    function add_number6() {number.value = number.value + 6;}
+    function add_number7() {number.value = number.value + 7;}
+    function add_number8() {number.value = number.value + 8;}
+    function add_number9() {number.value = number.value + 9;}
+    function add_number0() {number.value = number.value + 0;}
+    function add_calculate_add() {
+        add_calculate();
+        currentMark.innerText = "+";
+    }
+    function add_calculate_sub() {
+        add_calculate();
+        currentMark.innerText = "-";
+    }
+    function add_calculate_mul() {
+        add_calculate();
+        currentMark.innerText = "X";
+    }
+    function add_calculate_div() {
+        add_calculate();
+        currentMark.innerText = "/";
+    }
+    function calculate_equal() {
+        add_calculate();
+        currentMark.innerText = "";
+        a = 0;
+    }
+</script>
+</body>
+</html>

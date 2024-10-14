@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính cơ bản</title>
+</head>
+<body>
+<form method="get" action="#">
+    <fieldset>
+        <legend>Calculator</legend>
+        <input type="number" id="num_a" value="0">
+        <input type="number" id="num_b" value="0"><br>
+        <button onclick="add_calculate()">Addition(+)</button>
+        <button onclick="sub_calculate()">Subtration(-)</button>
+        <button onclick="mul_calculate()">Multiplication(X)</button>
+        <button onclick="div_calculate()">Division(/)</button>
+        <p id="result" style="border: dimgrey 2px solid; color: white; background-color: grey; width: 400px; height: 25px; text-align: end">
+            Display result here!</p>
+    </fieldset>
+</form>
+<script>
+    let numA = document.getElementById("num_a");
+    let numB = document.getElementById("num_b");
+    let calculate;
+    function add_calculate() {
+        calculate = parseInt(numA.value) + parseInt(numB.value);
+        document.getElementById("result").innerHTML = ("Addition result: "+calculate.toFixed(2));
+    }
+    function sub_calculate() {
+        calculate = parseInt(numA.value) - parseInt(numB.value);
+        document.getElementById("result").innerHTML = ("Subtration result: "+calculate.toFixed(2));
+    }
+    function mul_calculate() {
+        calculate = parseInt(numA.value) * parseInt(numB.value);
+        document.getElementById("result").innerHTML = ("Subtration result: "+calculate.toFixed(2));
+    }
+    function div_calculate() {
+        if(numB.value == 0) {document.getElementById("result").innerHTML = "Error Divide 0";}
+        else {
+        calculate = parseInt(numA.value) / parseInt(numB.value);
+        document.getElementById("result").innerHTML = ("Subtration result: "+calculate.toFixed(2));
+        }
+    }
+</script>
+</body>
+</html>
