@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: Chu vi hình tròn</title>
+</head>
+<body>
+<form action="#" method="get">
+    <fieldset>
+        <legend>Tính chu vi hình tròn</legend>
+        <label for="ban_kinh">Bán kính hình tròn</label><input type="number" id="ban_kinh" name="ban_kinh">
+        <button onclick="tinhChuVi()">Tính Chu Vi</button>
+    </fieldset>
+</form>
+<script>
+    let banKinh = document.getElementById("ban_kinh");
+    let chuVi;
+    const PI = 3.1415962
+    function tinhChuVi() {
+        chuVi = banKinh.value * 2 * PI;
+        alert("Diện tích của hình tròn là: " + chuVi.toFixed(2));
+    }
+</script>
+</body>
+</html>

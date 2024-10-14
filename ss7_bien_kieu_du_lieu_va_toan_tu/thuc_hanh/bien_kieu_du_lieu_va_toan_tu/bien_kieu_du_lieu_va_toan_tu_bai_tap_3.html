@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Diện tích hình tròn</title>
+</head>
+<body>
+<form action="#" method="get">
+    <fieldset>
+        <legend>Tính diện tích hình tròn</legend>
+        <label for="ban_kinh">Bán kính hình tròn</label><input type="number" id="ban_kinh" name="ban_kinh">
+        <button onclick="tinhDienTich()">Tính Diện Tích</button>
+    </fieldset>
+</form>
+<script>
+    let banKinh = document.getElementById("ban_kinh");
+    let dienTich;
+    const PI = 3.1415962
+    function tinhDienTich() {
+        dienTich = banKinh.value * banKinh.value * PI;
+        alert("Diện tích của hình tròn là: " + dienTich.toFixed(2));
+    }
+</script>
+</body>
+</html>

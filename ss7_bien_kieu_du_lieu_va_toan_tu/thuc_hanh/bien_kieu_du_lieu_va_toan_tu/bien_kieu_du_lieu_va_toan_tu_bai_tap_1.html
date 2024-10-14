@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Tính điểm trung bình</title>
+</head>
+<body>
+<form action="#" method="get">
+  <fieldset>
+    <legend>Tính điểm trung bình 3 môn</legend>
+    <label for="ma_hoc_sinh">Mã Học Sinh</label><input type="text" id="ma_hoc_sinh" name="ma_hoc_sinh"><br>
+    <label for="diem_ly">Điểm Vật Lý</label><input type="number" id="diem_ly" name="diem_ly" min="0" max="10" value="0"><br>
+    <label for="diem_hoa">Điểm Hóa Học</label><input type="number" id="diem_hoa" name="diem_hoa" min="0" max="10" value="0"><br>
+    <label for="diem_sinh">Điểm Sinh Học</label><input type="number" id="diem_sinh" name="diem_sinh" min="0" max="10" value="0"><br>
+    <button onclick="tinhDiem()">Tính Điểm Trung Bình</button>
+  </fieldset>
+</form>
+<script>
+  function tinhDiem() {
+    let maHocSinh = document.getElementById("ma_hoc_sinh").value;
+    let diemLy = parseInt(document.getElementById("diem_ly").value);
+    let diemHoa = parseInt(document.getElementById("diem_hoa").value);
+    let diemSinh = parseInt(document.getElementById("diem_sinh").value);
+    let diemTrungBinh = (diemLy + diemHoa + diemSinh)/3;
+    alert("Học sinh " +maHocSinh +" đạt điểm trung bình: " + diemTrungBinh.toFixed(2));
+  }
+</script>
+</body>
+</html>

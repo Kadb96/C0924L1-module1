@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<form action="#" method="get">
+  <fieldset>
+    <legend>Chuyển đổi nhiệt độ</legend>
+    <label for="do_c">Celsius</label><input type="number" id="do_c" name="do_c" onchange="sangF()"><br>
+    <label for="do_f">Fahrenheit</label><input type="number" id="do_f" name="do_f" onchange="sangC()"><br>
+  </fieldset>
+</form>
+<script>
+    let c = document.getElementById("do_c");
+    let f= document.getElementById("do_f");
+    function sangF() {
+      f.value = (c.value*9/5+32).toFixed(2);
+    }
+    function sangC() {
+      c.value = (f.value*5/9-32).toFixed(2);
+    }
+</script>
+</body>
+</html>
