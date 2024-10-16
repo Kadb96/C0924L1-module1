@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đi học lớp 10</title>
+</head>
+<body>
+<script>
+    let age = prompt("Nhập số tuổi của học sinh:", "0");
+    if (isNaN(age)) {
+        alert("Vui long nhap so");
+        age = prompt("Nhập số tuổi của học sinh:", "0");
+    }
+    if (age < 16) {
+        alert(`Học sinh ${age} tuổi là chưa đủ tuổi học lớp 10!`);
+    } else {
+        alert(`Học sinh ${age} tuổi là đã đủ tuổi học lớp 10!`);
+    }
+</script>
+</body>
+</html>

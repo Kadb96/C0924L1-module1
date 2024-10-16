@@ -10,50 +10,71 @@
         <legend>Calculator</legend>
         <input type="number" id="number" value="0">
         <span id="current_mark"></span><br>
-        <button onclick="add_number(1)">1</button>
-        <button onclick="add_number(2)">2</button>
-        <button onclick="add_number(3)">3</button><br>
-        <button onclick="add_number(4)">4</button>
-        <button onclick="add_number(5)">5</button>
-        <button onclick="add_number(6)">6</button><br>
-        <button onclick="add_number(7)">7</button>
-        <button onclick="add_number(8)">8</button>
-        <button onclick="add_number(9)">9</button><br>
-        <button onclick="add_number(0)">0</button><br>
-        <button onclick="add_calculate('+')">+</button>
-        <button onclick="add_calculate('-')">-</button>
-        <button onclick="add_calculate('X')">X</button>
-        <button onclick="add_calculate('/')">/</button><br>
-        <button onclick="calculate_equal()" style="background-color: dodgerblue; color: white">=</button>
+        <button type="button" onclick="addNumber(1)">1</button>
+        <button type="button" onclick="addNumber(2)">2</button>
+        <button type="button" onclick="addNumber(3)">3</button>
+        <br>
+        <button type="button" onclick="addNumber(4)">4</button>
+        <button type="button" onclick="addNumber(5)">5</button>
+        <button type="button" onclick="addNumber(6)">6</button>
+        <br>
+        <button type="button" onclick="addNumber(7)">7</button>
+        <button type="button" onclick="addNumber(8)">8</button>
+        <button type="button" onclick="addNumber(9)">9</button>
+        <br>
+        <button type="button" onclick="addNumber(0)">0</button>
+        <br>
+        <button type="button" onclick="add_calculate('+')">+</button>
+        <button type="button" onclick="add_calculate('-')">-</button>
+        <button type="button" onclick="add_calculate('X')">X</button>
+        <button type="button" onclick="add_calculate('/')">/</button>
+        <br>
+        <button type="button" onclick="calculate_equal()" style="background-color: dodgerblue; color: white">=</button>
     </fieldset>
 </form>
 <script>
     let number = document.getElementById("number");
     let currentMark = document.getElementById("current_mark");
-    let a;
-    function add_calculate() {
-        if (a == undefined) {
-            a = number.value;
-            number.value = 0;
-        }
-        else {
-            if (currentMark.innerText === "+") {number.value = parseInt(a) + parseInt(number.value);}
-            else if (currentMark.innerText === "-") {number.value = parseInt(a) - parseInt(number.value);}
-            else if (currentMark.innerText === "X") {number.value = parseInt(a) * parseInt(number.value);}
-            else if (currentMark.innerText === "/") {number.value = parseInt(a) / parseInt(number.value);}
-            a = number.value;
+    let firstNumber;
+
+
+    function clearInput() {
+        if (number.value == 0) {
+            number.value = "";
         }
     }
-    let b;
-    function add_number(value) {number.value = number.value + value;}
+    function addCalculate() {
+        if (!firstNumber) {
+            firstNumber = number.value;
+            number.value = 0;
+        } else {
+            if (currentMark.innerText === "+") {
+                number.value = parseInt(firstNumber) + parseInt(number.value);
+            } else if (currentMark.innerText === "-") {
+                number.value = parseInt(firstNumber) - parseInt(number.value);
+            } else if (currentMark.innerText === "X") {
+                number.value = parseInt(firstNumber) * parseInt(number.value);
+            } else if (currentMark.innerText === "/") {
+                number.value = parseInt(firstNumber) / parseInt(number.value);
+            }
+            firstNumber = number.value;
+        }
+    }
+
+    function addNumber(value) {
+        clearInput();
+        number.value = number.value + value;
+    }
+
     function add_calculate(mark) {
-        add_calculate();
+        addCalculate();
         currentMark.innerText = mark;
     }
+
     function calculate_equal() {
         add_calculate();
         currentMark.innerText = "";
-        a = 0;
+        firstNumber = 0;
     }
 </script>
 </body>

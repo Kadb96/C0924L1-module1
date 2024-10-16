@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sô ngày trong tháng</title>
+</head>
+<body>
+<label for="month">Month: </label><input id="month" type="number" min="1" max="12">
+<button type="submit" onclick="tinhSoNgay()">Tính số ngày</button>
+<p id="result"></p>
+<script>
+    let month = document.getElementById("month");
+    let result = document.getElementById("result");
+    let dayInMonth;
+
+    function tinhSoNgay() {
+        switch (parseInt(month.value)) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                dayInMonth = "31";
+                result.innerText = "Tháng " + month.value + " có " + dayInMonth + " ngày.";
+                break
+            case 2:
+                dayInMonth = "28 hoặc 29";
+                result.innerText = "Tháng " + month.value + " có " + dayInMonth + " ngày.";
+                break
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                dayInMonth = "30";
+                result.innerText = "Tháng " + month.value + " có " + dayInMonth + " ngày.";
+                break
+            default:
+                result.innerText = month.value + " không phải một tháng trong năm.";
+        }
+    }
+</script>
+</body>
+</html>

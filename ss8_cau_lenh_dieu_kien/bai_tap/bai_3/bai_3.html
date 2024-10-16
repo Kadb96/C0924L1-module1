@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Âm hay Dương</title>
+</head>
+<body>
+<script>
+    let number = prompt("Nhập số cần kiểm tra:","0");
+    while (isNaN(number)) {
+        alert("Vui lòng nhập số:");
+        number = prompt("Nhập số cần kiểm tra:","0");
+    }
+    if (number > 0) {
+        alert(`Số ${number} là số dương!`);
+    } else if (number < 0) {
+        alert(`Số ${number} là số âm!`);
+    } else {
+        alert(`Số ${number} là số không!`)
+    }
+</script>
+</body>
+</html>
