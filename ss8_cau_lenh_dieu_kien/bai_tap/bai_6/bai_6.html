@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Hoa Hồng</title>
+</head>
+<body>
+<script>
+    let doanhThu = +prompt("Doanh thu tháng này của nhân sự");
+    if (isNaN(doanhThu)) {
+        alert(`Doanh thu phải là một số`);
+        doanhThu = +prompt("Doanh thu tháng này của nhân sự")
+    }
+    let tiLe;
+    if (doanhThu >= 2000000000) {
+        tiLe = 0.5/100;
+    } else if (doanhThu >= 1500000000) {
+        tiLe = 0.4/100;
+    } else if (doanhThu >= 1200000000) {
+        tiLe = 0.3/100;
+    } else if (doanhThu >= 1000000000) {
+        tiLe = 0.2/100;
+    } else {
+        tiLe = 0.1/100;
+    }
+    alert (`Hoa hồng tháng này của nhân sự là ${doanhThu*tiLe} VNĐ`);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước phí điện thoại</title>
+</head>
+<body>
+<script>
+    let cuocGoi;
+    let thoiGianGoi = +prompt(`Nhập số phút gia đình dùng điện thoại`, `0`);
+    while (isNaN(thoiGianGoi) || thoiGianGoi < 0) {
+        alert('Thời gian gọi phải là một số dương');
+        thoiGianGoi = +prompt(`Nhập số phút gia đình dùng điện thoại`, `0`);
+    }
+    if (thoiGianGoi === 0) {
+        cuocGoi = 25000;
+    } else if (thoiGianGoi > 200) {
+        cuocGoi = 25000 + 600 * 50 + 400 * 150 + (thoiGianGoi - 200) * 200;
+    } else if (thoiGianGoi > 50) {
+        cuocGoi = 2500 + 600 * 50 + (thoiGianGoi - 50) * 400;
+    } else {
+        cuocGoi = 2500 + thoiGianGoi * 600;
+    }
+    alert(`Cước gọi tháng này của hộ gia đình là ${cuocGoi} VNĐ`);
+</script>
+</body>
+</html>

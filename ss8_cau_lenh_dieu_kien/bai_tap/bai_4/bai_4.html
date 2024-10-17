@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong 3 số</title>
+</head>
+<body>
+<script>
+    let max;
+    let a = +prompt("Nhập số a", "0");
+    while (isNaN(a)) {
+        alert("Hãy nhập a là số");
+        a = +prompt("Nhập số a", "0");
+    }
+    let b = +prompt("Nhập số b", "0");
+    while (isNaN(b)) {
+        alert("Hãy nhập b là số");
+        b = +prompt("Nhập số b", "0");
+    }
+    let c = +prompt("Nhập số c", "0");
+    while (isNaN(c)) {
+        alert("Hãy nhập c là số");
+        c = +prompt("Nhập số c", "0");
+    }
+    if (a >= c && a >= b) {
+        max = a;
+    } else if (b >= c) {
+        max = b;
+    } else {
+        max = c;
+    }
+    alert(`Số lớn nhất là ${a}`);
+</script>
+</body>
+</html>
