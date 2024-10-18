@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    let do_C = +prompt("Nhiệt độ C", "0");
+    while (isNaN(do_C)) {
+        alert("Nhiệt độ C cần nhập giá trị số");
+        do_C = +prompt("Nhiệt độ C", "0");
+    }
+    do_F = do_C * 9 / 5 + 32;
+    alert(`Nhiệt độ ${do_C.toFixed(2)} độ C tương ứng ${do_F.toFixed(2)} độ F`);
+</script>
+</body>
+</html>

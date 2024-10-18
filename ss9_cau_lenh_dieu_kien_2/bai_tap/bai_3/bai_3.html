@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình vuông</title>
+</head>
+<body>
+<script>
+    let a = +prompt(`Nhập độ dài một cạnh của hình vuông`);
+    while (isNaN(a)) {
+        alert(`Độ dài một cạnh của hình vuông là một số dương`);
+        a = +prompt(`Nhập độ dài một cạnh của hình vuông`);
+    }
+    let dienTich = a * a;
+    alert(`Diện tích của hình vuông là ${dienTich.toFixed(2)}`);
+</script>
+</body>
+</html>

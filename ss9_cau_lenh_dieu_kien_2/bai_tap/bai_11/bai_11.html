@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<script>
+    let thuNhap = +prompt(`Nhập thu nhập tháng này`);
+    while (isNaN(thuNhap) || thuNhap < 0) {
+        alert(`Thu nhập phải là một số dương`);
+        thuNhap = +prompt(`Nhập thu nhập tháng này`);
+    }
+    if (thuNhap <= 5000000) {
+        thue = thuNhap * 0.05;
+    } else if (thuNhap <= 10000000) {
+        thue = 250000 + (thuNhap - 5000000) * 0.1;
+    } else if (thuNhap <= 18000000) {
+        thue = 750000 + (thuNhap - 10000000) * 0.15;
+    } else if (thuNhap <= 32000000) {
+        thue = 1950000 + (thuNhap - 18000000) * 0.2;
+    } else if (thuNhap <= 52000000) {
+        thue = 4750000 + (thuNhap - 32000000) * 0.25;
+    } else if (thuNhap <= 80000000) {
+        thue = 9750000 + (thuNhap - 52000000) * 0.3;
+    } else {
+        thue = 18150000 + (thuNhap - 80000000) * 0.35;
+    }
+    alert(`Tiền thuế thu nhập cá nhân tháng này là ${thue}vnđ`);
+</script>
+</body>
+</html>

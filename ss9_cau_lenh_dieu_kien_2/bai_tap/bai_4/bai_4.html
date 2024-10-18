@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let a = +prompt(`Nhập độ chiều dài của hình chữ nhật`);
+    while (isNaN(a) || a < 0) {
+        alert(`Độ dài của chiều dài của hình tam giác là một số dương`);
+        a = +prompt(`Nhập độ chiều dài của hình chữ nhật`);
+    }
+    let b = +prompt(`Nhập độ chiều rộng của hình chữ nhật`);
+    while (isNaN(b) || b < 0) {
+        alert(`Độ dài của chiều rộng của hình tam giác là một số dương`);
+        b = +prompt(`Nhập độ chiều rộng của hình chữ nhật`);
+    }
+    let dienTich = a * b;
+    alert(`Diện tích của hình chữ nhật là ${dienTich.toFixed(2)}`);
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển từ m sang ft</title>
+</head>
+<body>
+<script>
+    let m = +prompt(`Nhập độ dài m`);
+    while (isNaN(m)) {
+        alert(`Độ dài m cần nhập là một số`);
+        m = +prompt(`Nhập độ dài m`);
+    }
+    let ft = m * 3.2808;
+    alert(`Độ dài ${m}m tương ứng ${ft.toFixed(2)}ft`);
+</script>
+</body>
+</html>

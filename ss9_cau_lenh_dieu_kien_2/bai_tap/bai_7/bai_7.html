@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<input type="number" id="a" style="width: 35px">
+<span>x^2 + </span>
+<input type="number" id="b" style="width: 35px">
+<span>x + </span>
+<input type="number" id="c" style="width: 35px">
+<span> = 0</span>
+<button onclick="solve()">Giải phương trình</button>
+<p id="result">Nghiệm của phương trình: </p>
+<script>
+    let a = document.getElementById("a");
+    let b = document.getElementById("b");
+    let c = document.getElementById("c");
+    let result = document.getElementById("result");
+    let xKep, x1, x2;
+
+    function solve() {
+        let delta = parseInt(b.value) * parseInt(b.value) - 4 * parseInt(a.value) * parseInt(c.value);
+        if (delta < 0) {
+            result.innerText = `Phương trình ${a.value}x^2 + ${b.value}x + ${c.value} = 0 vô nghiệm`;
+        } else if (delta === 0) {
+            xKep = -parseInt(b.value) / (2 * parseInt(a.value));
+            result.innerText = `Phương trình ${a.value}x^2 + ${b.value}x + ${c.value} = 0 có nghiệm kép x = ${xKep.toFixed(2)}`
+        } else {
+            x1 = (-parseInt(b.value) - Math.sqrt(delta)) / (2 * parseInt(a.value));
+            x2 = (-parseInt(b.value) + Math.sqrt(delta)) / (2 * parseInt(a.value));
+            result.innerText = `Phương trình ${a.value}x^2 + ${b.value}x + ${c.value} = 0 có 2 nghiệm x1 = ${x1.toFixed(2)} và x2 = ${x2.toFixed(2)}`;
+        }
+    }
+</script>
+</body>
+</html>

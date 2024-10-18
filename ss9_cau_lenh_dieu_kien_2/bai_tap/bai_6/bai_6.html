@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<input type="number" id="a" style="width: 35px">
+<span>x + </span>
+<input type="number" id="b" style="width: 35px">
+<span> = 0</span>
+<button onclick="solve()">Giải phương trình</button>
+<p id="result">Nghiệm của phương trình: </p>
+<script>
+    let a = document.getElementById("a");
+    let b = document.getElementById("b");
+    let result = document.getElementById("result");
+
+    function solve() {
+        let x = -parseInt(b.value) / parseInt(a.value);
+        result.innerText = `Nghiệm của phương trình ${a.value}x + ${b.value} = 0 là x = ${x.toFixed(2)}`;
+    }
+</script>
+</body>
+</html>

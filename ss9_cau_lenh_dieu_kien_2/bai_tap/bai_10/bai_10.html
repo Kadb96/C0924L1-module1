@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền điện</title>
+</head>
+<body>
+<script>
+    let soDien = +prompt(`Nhập số điện tháng này`);
+    while (isNaN(soDien) || soDien < 0) {
+        alert(`Số điện phải là một số dương`);
+        soDien = +prompt(`Nhập số điện tháng này`);
+    }
+    if (soDien <= 50) { //50 số đầu có giá 1.806 đồng/số
+        tienDien = soDien * 1806;
+    } else if (soDien <= 100) { //51-100 có giá 1.866 đồng/số
+        tienDien = 50 * 1806 + (soDien - 50) * 1866;
+    } else if (soDien <= 200) { //101-200 có giá 2.167 đồng/số
+        tienDien = 50 * 1806 + 50 * 1866 + (soDien - 100) * 2167;
+    } else if (soDien <= 300) { //201-300 có giá 2.729 đồng/số
+        tienDien = 50 * 1806 + 50 * 1866 + 100 * 2167 + (soDien - 200) * 2729;
+    } else if (soDien <= 400) { //301-400 có giá 3.050 đồng/số
+        tienDien = 50 * 1806 + 50 * 1866 + 100 * 2167 + 100 * 2729 + (soDien - 300) * 3050;
+    } else { //số 401 trở lên có giá 3.151 đồng/số
+        tienDien = 50 * 1806 + 50 * 1866 + 100 * 2167 + 100 * 2729 + 100 * 3050 + (soDien - 400) * 3151;
+    }
+    alert(`Tiền điện tháng này là ${tienDien}vnđ`);
+</script>
+</body>
+</html>

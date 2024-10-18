@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ba cạnh của tam giác</title>
+</head>
+<body>
+<script>
+    let a = +prompt(`Nhập độ dài của một cạnh của tam giác`);
+    while (isNaN(a) || a <= 0) {
+        alert("Độ dài của một cạnh tam giác phải là một số dương");
+        a = +prompt(`Nhập độ dài của một cạnh tam giác`);
+    }
+    let b = +prompt(`Nhập độ dài của cạnh khác của tam giác`);
+    while (isNaN(b) || b <= 0) {
+        alert("Độ dài của một cạnh tam giác phải là một số dương");
+        b = +prompt(`Nhập độ dài của cạnh khác của tam giác`);
+    }
+    let c = +prompt(`Nhập độ dài của cạnh còn lại tam giác`);
+    while (isNaN(c) || c <= 0) {
+        alert("Độ dài của một cạnh tam giác phải là một số dương");
+        c = +prompt(`Nhập độ dài của cạnh còn lại tam giác`);
+    }
+    if ((a + b > c) && (b + c > a) && (a + c) > b) {
+        alert(`${a}, ${b} và ${c} là ba cạnh của một tam giác`);
+    } else {
+        alert(`${a}, ${b} và ${c} không phải là ba cạnh của một tam giác`);
+
+    }
+</script>
+</body>
+</html>
