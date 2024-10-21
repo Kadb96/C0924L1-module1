@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fibonacci chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let previousNumber = 0;
+    let currentNumber = 1;
+    let sum;
+    while (currentNumber % 5 !== 0) {
+        sum = previousNumber + currentNumber;
+        previousNumber = currentNumber;
+        currentNumber = sum;
+    }
+    console.log(currentNumber);
+</script>
+</body>
+</html>

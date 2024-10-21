@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 số fibonacci</title>
+</head>
+<body>
+<script>
+    let previousNumber = 0;
+    let currentNumber = 1;
+    let sum;
+    for (let i = 1; i <= 20; i++) {
+        console.log(currentNumber);
+        sum = previousNumber + currentNumber;
+        previousNumber = currentNumber;
+        currentNumber = sum;
+    }
+</script>
+</body>
+</html>

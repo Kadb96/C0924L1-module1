@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hãy thử đoán xem!</title>
+</head>
+<body>
+<button onclick="gameOn()">
+    Chơi
+</button>
+<script>
+    function gameOn() {
+        let minOfRange = +prompt("Hãy chọn số bé nhất của khoảng");
+        while (isNaN(minOfRange)) {
+            alert("Số bé nhất của khoảng không hợp lệ!");
+            minOfRange = +prompt("Hãy chọn số bé nhất của khoảng");
+        }
+        let maxOfRange = +prompt("Hãy chọn số lớn nhất của khoảng");
+        while (isNaN(maxOfRange)) {
+            alert("Số lớn nhất của khoảng không hợp lệ!");
+            maxOfRange = +prompt("Hãy chọn số lớn nhất của khoảng");
+        }
+        let answer = Math.floor(Math.random() * (maxOfRange - minOfRange)) + minOfRange;
+        let guess;
+        for (let i = 1; i <= 3; i++) {
+            guess = +prompt(`Hãy thử đoán xem!`);
+            if (guess === answer) {
+                alert(`${answer} là đáp án chính xác!`);
+                break;
+            } else if (i === 3) {
+                alert(`Chúc bạn may mắn lần sau!`);
+                break;
+            } else {
+                alert(`Tiếp tục nào bạn ơi!`);
+            }
+        }
+    }
+</script>
+</body>
+</html>
