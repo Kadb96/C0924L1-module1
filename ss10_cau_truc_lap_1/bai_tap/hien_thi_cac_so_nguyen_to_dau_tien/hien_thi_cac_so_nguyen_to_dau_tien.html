@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("Số lượng số nguyên tố cần in ra");
+    while (isNaN(numbers) || numbers < 0) {
+        alert("Số lượng số nguyên tố cần in ra là số dương");
+        numbers = +prompt("Số lượng số nguyên tố cần in ra");
+    }
+    let count = 0;
+    let N = 2;
+    while (count < numbers) {
+        for (let i = 2; i <= N; i++) {
+            if (i === N) {
+                console.log(N);
+                count++;
+            } else if (N % i === 0) {
+                break;
+            }
+        }
+        N++;
+    }
+</script>
+</body>
+</html>
