@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giai Thừa</title>
+</head>
+<body>
+<script>
+    let soGiaiThua = +prompt("Nhập một số nguyên dương");
+    while (isNaN(soGiaiThua) || soGiaiThua <= 0) {
+        soGiaiThua = +prompt("Nhập một số nguyên dương");
+    }
+    let giaiThua =1;
+    for (let i = 1; i <= soGiaiThua; i++) {
+        giaiThua *= i;
+    }
+    alert(`Giai thừa của ${soGiaiThua} là ${soGiaiThua}! = ${giaiThua}`);
+</script>
+</body>
+</html>

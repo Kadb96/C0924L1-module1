@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tiền vay ngân hàng</title>
+</head>
+<body>
+<label for="interest">Lãi suất: </label>
+<input type="number" id="interest" value="5" onchange="tinhTien()"><span>%</span><br>
+<label for="debt">Số tiền vay: </label>
+<input type="number" id="debt" value="0" min="0" onchange="tinhTien()"><span>vnđ</span><br>
+<label for="month">Số tháng vay:</label>
+<input type="number" id="month" value="0" min="0" onchange="tinhTien()"><span>tháng</span>
+<p id="payment">Tổng số tiền phải trả khi hết kì hạn vay: 0vnđ</p>
+<script>
+    let interest = document.getElementById("interest");
+    let debt = document.getElementById("debt");
+    let month = document.getElementById("month");
+    let payment = document.getElementById("payment");
+
+    function tinhTien() {
+        let totalPayment = parseInt(debt.value);
+        for (let i = 1; i <= parseInt(month.value); i++) {
+            totalPayment += (totalPayment*interest.value/100);
+        }
+        payment.innerText = `Tổng số tiền phải trả khi hết kì hạn vay là ${totalPayment}vnđ`
+    }
+</script>
+</body>
+</html>

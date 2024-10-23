@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+<script>
+    // tam giác có góc vuông bottom-left
+    for (let i = 1; i <= 5; i++) {
+        let draw = "";
+        for (let j = 1; j <= i; j++) {
+            draw += "*";
+        }
+        console.log(draw);
+    }
+    // tam giác có góc vuông top-left
+    for (let i = 5; i >= 1; i--) {
+        let draw = "";
+        for (let j = 1; j <= i; j++) {
+            draw += "*";
+        }
+        console.log(draw);
+    }
+    // tam giác có góc vuông bottom-right
+    for (let i = 1; i <= 5; i++) {
+        let draw = "";
+        for (let j = 0; j < 5 - i; j++) {
+            draw += " ";
+        }
+        for (let j = 1; j <= i; j++) {
+            draw += "*";
+        }
+        console.log(draw);
+    }
+    // tam giác có góc vuông top-right
+    for (let i = 5; i >= 1; i--) {
+        let draw = "";
+        for (let j = 0; j < 5 - i; j++) {
+            draw += " ";
+        }
+        for (let j = 1; j <= i; j++) {
+            draw += "*";
+        }
+        console.log(draw);
+    }
+</script>
+</body>
+</html>

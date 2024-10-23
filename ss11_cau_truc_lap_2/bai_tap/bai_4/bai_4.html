@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let chieuDai = +prompt("Hãy nhập chiều dài hình chữ nhật");
+    while (isNaN(chieuDai) || chieuDai <= 0) {
+        alert("Chiều dài hình chữ nhật là một số nguyên dương");
+        chieuDai = +prompt("Hãy nhập chiều dài hình chữ nhật");
+    }
+    let chieuRong = +prompt("Hãy nhập chiều rộng hình chữ nhật");
+    while (isNaN(chieuRong) || chieuRong <= 0 || chieuRong > chieuDai) {
+        alert("Chiều rộng hình chữ nhật là một số nguyên dương nhỏ hơn chiều dài");
+        chieuRong = +prompt("Hãy nhập chiều rộng hình chữ nhật");
+    }
+    let draw = "";
+    for (let i = 1; i <= chieuDai; i++) {
+        draw += "*";
+    }
+    console.log(draw);
+    for (let i = 1; i <= chieuRong - 2; i++) {
+        draw = "*";
+        for (let j = 1; j <= chieuDai - 2; j++) {
+            draw += " ";
+        }
+        draw += "*";
+        console.log(draw);
+    }
+    draw = "";
+    for (let i = 1; i <= chieuDai; i++) {
+        draw += "*";
+    }
+    console.log(draw);
+</script>
+</body>
+</html>
