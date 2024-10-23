@@ -21,7 +21,7 @@
     function tinhTien() {
         let totalPayment = parseInt(debt.value);
         for (let i = 1; i <= parseInt(month.value); i++) {
-            totalPayment += (totalPayment*interest.value/100);
+            totalPayment += (totalPayment * interest.value / 100);
         }
         payment.innerText = `Tổng số tiền phải trả khi hết kì hạn vay là ${totalPayment}vnđ`
     }
