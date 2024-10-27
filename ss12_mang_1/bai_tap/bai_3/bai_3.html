@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trung bình của chuỗi</title>
+</head>
+<body>
+<script>
+    let lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của chuỗi phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        while (isNaN(arr[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        }
+    }
+    let biggest = arr[0];
+    let indexOfBiggest = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > biggest) {
+            biggest = arr[i];
+            indexOfBiggest = i;
+        }
+    }
+    console.log(`Số nguyên lớn nhất trong chuỗi nằm ở vị trí ${indexOfBiggest} có giá trị là ${biggest}`);
+    let totalOfArr = arr.reduce((a, b) => a + b);
+    let averageOfArr = totalOfArr / lengthOfArr;
+    console.log(`Số trung bình của chuỗi là ${averageOfArr.toFixed(2)}`);
+</script>
+</body>
+</html>

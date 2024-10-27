@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối mảng</title>
+</head>
+<body>
+<script>
+    let arrA = new Array(10);
+    for (let i = 0; i < arrA.length; i++) {
+        arrA[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của mảng a`);
+        while (isNaN(arrA[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arrA[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của của mảng a`);
+        }
+    }
+    let arrB = new Array(10);
+    for (let i = 0; i < arrB.length; i++) {
+        arrB[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của mảng b`);
+        while (isNaN(arrB[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arrB[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của của mảng C`);
+        }
+    }
+    let arrC = arrA.concat(arrB);
+    console.log(`Mảng c được nối từ hai mảng b và a là: ${arrC}`)
+</script>
+</body>
+</html>

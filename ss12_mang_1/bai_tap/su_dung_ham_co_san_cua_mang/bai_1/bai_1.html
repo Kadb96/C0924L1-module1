@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối chuỗi mảng</title>
+</head>
+<body>
+<script>
+    let lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của chuỗi phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(`Nhập phần tử thứ ${i + 1} của mảng`);
+    }
+    let string = arr.join(",");
+    console.log(`Chuỗi đã gộp từ mảng là ${string}`);
+</script>
+</body>
+</html>

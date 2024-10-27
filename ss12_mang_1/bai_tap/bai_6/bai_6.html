@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V is in the array</title>
+</head>
+<body>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        while (isNaN(arr[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        }
+    }
+    let v = +prompt(`Nhập số nguyên cần kiểm tra`);
+    while (isNaN(v)) {
+        alert(`Hãy nhập một số nguyên`);
+        v = +prompt(`Nhập số nguyên cần kiểm tra`);
+    }
+    let vInArr = false;
+    for (const vElement of arr) {
+        if (v === vElement) {
+            vInArr = true;
+            break;
+        }
+    }
+    if (vInArr) {
+        console.log(`V is in the array`);
+    } else {
+        console.log(`V is not in the array`);
+    }
+</script>
+</body>
+</html>

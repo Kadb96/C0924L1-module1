@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số lượng số nguyên âm</title>
+</head>
+<body>
+<script>
+    let lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của chuỗi phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        while (isNaN(arr[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        }
+    }
+    let smallerThan0Arr = arr.filter(a => a < 0);
+    let smallerThan0 = smallerThan0Arr.length;
+    console.log(`Số lượng số nguyên âm trong chuỗi ${smallerThan0}`);
+</script>
+</body>
+</html>

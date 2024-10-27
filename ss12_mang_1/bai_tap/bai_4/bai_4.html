@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược chuỗi</title>
+</head>
+<body>
+<script>
+    let lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của chuỗi phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        while (isNaN(arr[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        }
+    }
+    console.log(`Chuỗi trước khi đảo ngược là ${arr}`);
+    let reverseArr = arr.map(a => a * -1);
+    console.log(`Chuỗi sau khi đảo ngược là ${reverseArr}`);
+</script>
+</body>
+</html>

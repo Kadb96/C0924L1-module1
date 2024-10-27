@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<form action="#" method="get">
+    <label for="tieng_anh">English</label>
+    <input type="text" id="tieng_anh" onchange="transAnh()"><br>
+    <label for="tieng_viet">Tiếng Việt</label>
+    <input type="text" id="tieng_viet" onchange="transViet()"><br>
+</form>
+
+<script>
+    let tiengAnhArr = ["banana", "apple"];
+    let tiengVietArr = ["chuoi", "tao"];
+    let tiengAnh = document.getElementById("tieng_anh");
+    let tiengViet = document.getElementById("tieng_viet");
+
+    function transAnh() {
+        for (let i = 0; i < tiengAnhArr.length; i++) {
+            if (tiengAnhArr[i] === tiengAnh.value) {
+                tiengViet.value = tiengVietArr[i];
+            }
+        }
+    }
+
+    function transViet() {
+        for (let i = 0; i < tiengVietArr.length; i++) {
+            if (tiengVietArr[i] === tiengViet.value) {
+                tiengAnh.value = tiengAnhArr[i];
+            }
+        }
+    }
+</script>
+</body>
+</html>

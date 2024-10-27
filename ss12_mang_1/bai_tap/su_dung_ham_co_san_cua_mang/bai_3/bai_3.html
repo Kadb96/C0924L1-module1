@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoa</title>
+</head>
+<body>
+<script>
+    let string = prompt(`Nhập chuỗi`);
+    const lowerCase = "abcdefghijklmnopqrstuwxvyz";
+    const upperCase = lowerCase.toUpperCase();
+    const lowerCaseArray = lowerCase.split("");
+    const upperCaseArray = upperCase.split("");
+    let arr = string.split("");
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < lowerCaseArray.length; j++) {
+            if (arr[i] === lowerCaseArray[j]) {
+                arr[i] = upperCaseArray[j];
+                break;
+            } else if (arr[i] === upperCaseArray[j]) {
+                arr[i] = lowerCaseArray[j];
+                break;
+            }
+        }
+    }
+    string = arr.join("");
+    console.log(`Chuỗi mới là: ${string}`);
+</script>
+</body>
+</html>
