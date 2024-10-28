@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế kí tự</title>
+</head>
+<body>
+<script>
+    let lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của mảng phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(`Nhập kí tự thứ ${i + 1} của mảng`);
+        while (arr[i].length > 1) {
+            alert(`Hãy nhập một kí tự`);
+            arr[i] = prompt(`Nhập kí tự thứ ${i + 1} của mảng`);
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "-") {
+            arr[i] = "_";
+        }
+    }
+    console.log(arr);
+</script>
+</body>
+</html>

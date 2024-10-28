@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số từ trong chuỗi</title>
+</head>
+<body>
+<script>
+    let lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của mảng phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(`Nhập phần tử thứ ${i + 1} của mảng`);
+    }
+    let reverseArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        reverseArr[i] = arr[arr.length - i - 1];
+    }
+    let string = reverseArr.join("");
+    console.log(`Chuỗi đảo ngược của mảng là ${string}`);
+</script>
+</body>
+</html>

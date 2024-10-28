@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm kí tự số</title>
+</head>
+<body>
+<script>
+    const number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0) {
+        alert(`Độ dài của mảng phải là một sô nguyên dương`);
+        lengthOfArr = +prompt(`Nhập độ dài của mảng`);
+    }
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt(`Nhập kí tự thứ ${i + 1} của mảng`);
+        while (arr[i].length > 1) {
+            alert(`Hãy nhập một kí tự`);
+            arr[i] = prompt(`Nhập kí tự thứ ${i + 1} của mảng`);
+        }
+    }
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < number.length; j++) {
+            if (arr[i] == number[j]) {
+                count++;
+                break;
+            }
+        }
+    }
+    console.log(`Mảng có chứa ${count} số kí tự số`);
+</script>
+</body>
+</html>
