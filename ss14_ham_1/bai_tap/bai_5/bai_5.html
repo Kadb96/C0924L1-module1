@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zodiac</title>
+</head>
+<body>
+<script>
+    let star = [
+        'Polaris',
+        'Aldebaran',
+        'Deneb',
+        'Vega',
+        'Altair',
+        'Dubhe',
+        'Regulus',
+    ];
+    let zodiac = [
+        'Ursa Minor',
+        'Tarurus',
+        'Cygnus',
+        'Lyra',
+        'Aquila',
+        'Ursa Major',
+        'Leo',
+    ];
+
+    function findZodiac(yourStar) {
+        if (star.includes(yourStar)) {
+            for (let i = 0; i < star.length; i++) {
+                if (yourStar === star[i]) {
+                    alert(`Your zodiac is ${zodiac[i]}`);
+                    break;
+                }
+            }
+        } else {
+            alert(`No zodiac found`);
+        }
+    }
+
+</script>
+</body>
+</html>

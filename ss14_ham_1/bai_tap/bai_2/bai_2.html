@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plus 1</title>
+</head>
+<body>
+<script>
+    let numb = +prompt(`Nhập số`);
+    while (isNaN(numb)) {
+        numb = +prompt(`Nhập số`);
+    }
+
+    function increase(number) {
+        return number + 1;
+    }
+
+    numb = increase(numb);
+    console.log(numb);
+    alert(numb);
+</script>
+</body>
+</html>
