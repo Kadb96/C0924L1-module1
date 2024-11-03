@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Min</title>
+</head>
+<body>
+<script>
+    function findMin(first, second, third) {
+        if (first <= second && first <= third) {
+            return first;
+        } else if (second <= third) {
+            return second;
+        } else {
+            return third;
+        }
+    }
+
+    let a = 2;
+    let b = 2;
+    let c = 10;
+    console.log(findMin(a, b, c));
+</script>
+</body>
+</html>

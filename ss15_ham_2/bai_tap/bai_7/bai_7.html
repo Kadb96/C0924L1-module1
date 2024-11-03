@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swap</title>
+</head>
+<body>
+<script>
+    let firstNumber = +prompt(`First number`);
+    let secondNumber = +prompt(`Second number`);
+    let arr = [firstNumber, secondNumber];
+
+    function swap(array) {
+        array[0] += array[1];
+        array[1] = array[0] - array[1];
+        array[0] -= array[1];
+    }
+
+    swap(arr);
+    console.log(arr);
+</script>
+</body>
+</html>

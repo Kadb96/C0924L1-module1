@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Alert</title>
+</head>
+<body>
+<script>
+    let keyboardInput = prompt(`Input`);
+
+    function isNumber(checkInput) {
+        for (let i = 0; i < checkInput.length; i++) {
+            if (checkInput[i] == 0) {
+                continue;
+            } else if (checkInput[i] == 1) {
+                continue;
+            } else if (checkInput[i] == 2) {
+                continue;
+            } else if (checkInput[i] == 3) {
+                continue;
+            } else if (checkInput[i] == 4) {
+                continue;
+            } else if (checkInput[i] == 5) {
+                continue;
+            } else if (checkInput[i] == 6) {
+                continue;
+            } else if (checkInput[i] == 7) {
+                continue;
+            } else if (checkInput[i] == 8) {
+                continue;
+            } else if (checkInput[i] == 9) {
+                continue;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    alert(isNumber(keyboardInput));
+</script>
+</body>
+</html>

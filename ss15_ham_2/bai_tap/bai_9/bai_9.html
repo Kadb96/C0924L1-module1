@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check In Array</title>
+</head>
+<body>
+<script>
+    function check(array, character) {
+        for (let i = 0; i < array.length; i++) {
+            if (character === array[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    let arr = ["a", "b", "c", "d", "e", "f", "z"];
+    let char = "h";
+    console.log(check(arr, char));
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse</title>
+</head>
+<body>
+<script>
+    let arr = [0, 1, 2, 3, 4, 5];
+
+    function reverseArray(array) {
+        let sub = []
+        for (let i = 0; i < array.length; i++) {
+            sub.push(array[i]);
+        }
+        for (let i = 0; i < array.length; i++) {
+            array[i] = sub[array.length - 1 - i];
+        }
+    }
+
+    reverseArray(arr);
+    console.log(arr)
+</script>
+</body>
+</html>
