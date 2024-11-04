@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Class Rectangle</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid orange;
+            width: 400px;
+            height: 400px;
+
+        }
+        #rectangleDraw {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
-<canvas id="rectangleDraw"></canvas>
+<div class="container">
+    <canvas id="rectangleDraw"></canvas>
+</div>
 <script>
     class Rectangle {
         constructor(longerSide, shorterSide) {
