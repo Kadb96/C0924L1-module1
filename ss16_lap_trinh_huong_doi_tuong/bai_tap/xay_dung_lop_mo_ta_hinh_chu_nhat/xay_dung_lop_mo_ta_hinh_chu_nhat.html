@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Rectangle</title>
+</head>
+<body>
+<canvas id="rectangleDraw"></canvas>
+<script>
+    class Rectangle {
+        constructor(longerSide, shorterSide) {
+            this.longerSide = longerSide;
+            this.shorterSide = shorterSide;
+        }
+
+        setLongerSide(longerSide) {
+            this.longerSide = longerSide;
+        }
+
+        setShorterSide(shorterSide) {
+            this.shorterSide = shorterSide;
+        }
+
+        getArea() {
+            return this.longerSide * this.shorterSide;
+        }
+
+        getCircumference() {
+            return (this.longerSide + this.shorterSide) * 2;
+        }
+
+        draw() {
+            let ctx = document.getElementById("rectangleDraw").getContext("2d");
+            ctx.clearRect(0,0,10000,10000);
+            ctx.fillStyle = "#FF0000";
+            console.log("mau");
+            ctx.fillRect(0,0,this.longerSide,this.shorterSide);
+            console.log("ve");
+        }
+    }
+
+    let rectangle1 = new Rectangle(200,100);
+    rectangle1.draw();
+    rectangle1.setLongerSide(150);
+    rectangle1.setShorterSide(90);
+    rectangle1.draw();
+    document.writeln(`<p>Area of the Rectangle is ${rectangle1.getArea()}</p>`);
+    document.writeln(`<p>Circumference of the Rectangle is ${rectangle1.getCircumference()}</p>`);
+</script>
+</body>
+</html>
