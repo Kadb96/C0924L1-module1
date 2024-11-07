@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phan mem quan ly san pham</title>
+    <link rel="stylesheet" href="quan_ly_phan_mem.css">
+</head>
+<body>
+<button id="showAddProductFormButton" onclick="showAddProductForm();">Add Product Form</button>
+<br>
+<form id="addProductForm" class="hide" action="#" method="post">
+    <fieldset>
+        <legend>Fill the infomation to add new product</legend>
+        <input type="text" id="id" placeholder="Product ID"><label for="id">Product ID</label><br>
+        <input type="text" id="name" placeholder="Product Name"><label for="name">Product Name</label><br>
+        <input type="number" id="price" placeholder="Product Price"><label for="price">Product Price</label><br>
+        <button type="button" id="addProductButton" onclick="addNewProduct()">Add New Product</button>
+    </fieldset>
+</form>
+<button id="showProductListButton" onclick="showProductList()">Show Product List</button>
+<table id="productList">
+    <tr>
+        <th>Number</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Adjust</th>
+        <th>Delete</th>
+    </tr>
+</table>
+<script src="quan_ly_phan_mem.js"></script>
+</body>
+</html>

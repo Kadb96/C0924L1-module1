@@ -1,0 +1,26 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+button {
+    margin: 5px;
+}
+
+table {
+    margin: 5px;
+    border: 1px solid black;
+}
+
+th {
+    margin: 5px;
+    border: 1px solid black;
+}
+
+td {
+    margin: 5px;
+    border: 1px solid black;
+}
