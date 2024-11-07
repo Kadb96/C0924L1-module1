@@ -19,11 +19,13 @@
         switchOff() {
             this.status = false;
             this.lamp.turnOff();
+            console.log(`off`)
         }
 
         switchOn() {
             this.status = true;
             this.lamp.turnOn();
+            console.log(`onl`)
         }
 
         getStatus() {
