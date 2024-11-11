@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Number And Character</title>
 </head>
 <body>
+<script>
+    function isNumberOrCharacter(arr) {
+        let subArr = arr.map(a => isNaN(a));
+        let numberSubArr = subArr.filter(a => a === false);
+        if (numberSubArr.length === arr.length) {
+            return 1;
+        } else if (numberSubArr.length === 0) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
 
+    console.log(isNumberOrCharacter([5,2,8,1,4]));
+    console.log(isNumberOrCharacter(["a","b","r","e"]));
+    console.log(isNumberOrCharacter([1,"a",9,4]));
+</script>
 </body>
 </html>
