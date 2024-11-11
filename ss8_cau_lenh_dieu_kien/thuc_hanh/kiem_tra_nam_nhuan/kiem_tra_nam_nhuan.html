@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leap Year</title>
+</head>
+<body>
+<script>
+    let year = +prompt(`Enter a year:`);
+    while (isNaN(year) || year <=0) {
+        year = +prompt(`Enter a year`);
+    }
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            alert(`${year} is not a leap year`);
+        } else {
+            alert(`${year} is a leap year`);
+        }
+    } else {
+        alert(`${year} is not a leap year`);
+    }
+</script>
+</body>
+</html>

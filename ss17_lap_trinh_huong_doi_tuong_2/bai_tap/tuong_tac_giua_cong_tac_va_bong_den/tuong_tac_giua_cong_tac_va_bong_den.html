@@ -7,9 +7,9 @@
 <body>
 <script>
     class SwitchButton {
-        constructor(status, lamp) {
-            this.status = status;
-            this.lamp = lamp;
+        constructor() {
+            this.status = false;
+            this.lamp = null;
         }
 
         connectToLamp(electricLamp) {
@@ -34,8 +34,8 @@
     }
 
     class ElectricLamp {
-        constructor(status) {
-            this.status = status;
+        constructor() {
+            this.status = false;
         }
 
         turnOff() {

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Triangle Function</title>
+</head>
+<body>
+<script>
+    // viết một hàm truyền vào 3 tham số checkTriangle(x,y,z)
+    function checkTriangle(x, y, z) {
+        if (x <= 0 || y <= 0 || z <= 0) {
+            console.log(`Không phải cạnh tam giác`);
+        } else if (x + y <= z || y + z <= x || x + z <= y) {
+            console.log(`Không phải cạnh tam giác`);
+        } else if (x * x + y * y === z * z) {
+            console.log(`Là 3 cạnh tam giác vuống`);
+        } else if (y * y + z * z === x * x) {
+            console.log(`Là 3 cạnh tam giác vuống`);
+        } else if (x * x + z * z === y * y) {
+            console.log(`Là 3 cạnh tam giác vuống`);
+        } else {
+            console.log(`Chỉ là 3 cạnh của một tam giác`);
+        }
+    }
+    //test
+    checkTriangle(-3, 5, 7);
+    checkTriangle(1, 2, 3);
+    checkTriangle(3, 4, 5);
+    checkTriangle(4, 12, 10);
+</script>
+</body>
+</html>

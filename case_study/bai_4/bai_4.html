@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraction</title>
+</head>
+<body>
+<script>
+    function find(x) {
+        let indexOfSlash = x.indexOf(`/`);
+        let numerator = x.slice(0, indexOfSlash);
+        numerator = Number(numerator);
+        let denominator = x.slice(indexOfSlash + 1, x.length);
+        denominator = Number(denominator);
+        if (indexOfSlash < 1 || indexOfSlash === x.length - 1) {
+            console.log(`Không phải phân số`);
+        } else if (isNaN(numerator) || isNaN(denominator) || denominator === 0) {
+            console.log(`Không phải phân số`);
+        } else if (numerator % denominator === 0) {
+            console.log(numerator / denominator);
+        } else {
+            for (let i = 2; i <= Math.min(numerator, denominator); i++) {
+                if (numerator % i === 0 && denominator % i === 0) {
+                    numerator /= i;
+                    denominator /= i;
+                    i = 2;
+                }
+            }
+            console.log(`${numerator}/${denominator}`);
+        }
+    }
+
+    let input = prompt(`x = `);
+    find(input);
+</script>
+</body>
+</html>
