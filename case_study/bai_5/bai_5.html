@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fraction</title>
+    <title>Find Max Number</title>
 </head>
 <body>
 <script>
-    function find(x) {
-        let indexOfSlash = x.indexOf(`/`);
-        console.log(indexOfSlash);
+    function findMaxNumber(n) {
+        if(isNaN(n) || (n.toString()).length !== 4) {
+            return -1;
+        } else {
+            let firstNumber = n.toString()[0];
+            let secondNumber = n.toString()[1];
+            let thirdNumber = n.toString()[2];
+            let forthNumber = n.toString()[3];
+            let firstBigNumber = parseInt(firstNumber+secondNumber+thirdNumber);
+            let secondBigNumber = parseInt(firstNumber+secondNumber+forthNumber);
+            let thirdBigNumber = parseInt(firstNumber+thirdNumber+forthNumber);
+            let forthBigNumber = parseInt(secondNumber+thirdNumber+forthNumber);
+            let array = [firstBigNumber, secondBigNumber, thirdBigNumber, forthBigNumber];
+            return Math.max(...array);
+        }
     }
 
-    let input = prompt(`x = `);
-    find(input);
+
+    console.log(findMaxNumber(`abcd`));
+    console.log(findMaxNumber(12345));
+    console.log(findMaxNumber(1234));
 </script>
 </body>
 </html>
