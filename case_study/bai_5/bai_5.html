@@ -7,17 +7,17 @@
 <body>
 <script>
     function findMaxNumber(n) {
-        if(isNaN(n) || (n.toString()).length !== 4) {
+        if (isNaN(n) || (n.toString()).length !== 4) {
             return -1;
         } else {
             let firstNumber = n.toString()[0];
             let secondNumber = n.toString()[1];
             let thirdNumber = n.toString()[2];
             let forthNumber = n.toString()[3];
-            let firstBigNumber = parseInt(firstNumber+secondNumber+thirdNumber);
-            let secondBigNumber = parseInt(firstNumber+secondNumber+forthNumber);
-            let thirdBigNumber = parseInt(firstNumber+thirdNumber+forthNumber);
-            let forthBigNumber = parseInt(secondNumber+thirdNumber+forthNumber);
+            let firstBigNumber = parseInt(firstNumber + secondNumber + thirdNumber);
+            let secondBigNumber = parseInt(firstNumber + secondNumber + forthNumber);
+            let thirdBigNumber = parseInt(firstNumber + thirdNumber + forthNumber);
+            let forthBigNumber = parseInt(secondNumber + thirdNumber + forthNumber);
             let array = [firstBigNumber, secondBigNumber, thirdBigNumber, forthBigNumber];
             return Math.max(...array);
         }
