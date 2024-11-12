@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vowels</title>
+</head>
+<body>
+<script>
+    function checkString(str) {
+        str = str.toLowerCase();
+        let output = [];
+        let vowels = ["u", "e", "o", "a", "i"];
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < vowels.length; j++) {
+                if (str[i] === vowels[j]) {
+                    output.push(vowels[j]);
+                    delete vowels [j];
+                    break;
+                }
+            }
+        }
+        return output;
+    }
+
+    console.log(checkString(`hello`));
+    console.log(checkString(`Codegym DaNang A`));
+    console.log(checkString(`O,e,e,E`))
+</script>
+</body>
+</html>

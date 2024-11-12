@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1 is smaller than 2</title>
+</head>
+<body>
+<script>
+    // nhập độ dài chuỗi n
+    let lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0 || lengthOfArr % 2 !== 0) {
+        alert(`Độ dài của chuỗi phải là một sô nguyên dương chẵn`);
+        lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    }
+    // nhập mảng từ bàn phím
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        while (isNaN(arr[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        }
+    }
+    // hiển thị và kiêm tra mảng vừa nhập
+    console.log(arr);
+    let flag = true;
+    for (let i = 0; i < arr.length; i += 2) {
+        if (arr[i] >= arr[i + 1]) {
+            flag = false;
+            break;
+        }
+    }
+    if (flag) {
+        console.log(`OK`);
+    } else {
+        console.log(`NO`);
+    }
+</script>
+</body>
+</html>
