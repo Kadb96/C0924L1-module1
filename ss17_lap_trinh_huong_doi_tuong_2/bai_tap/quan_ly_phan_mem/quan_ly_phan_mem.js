@@ -31,12 +31,12 @@ function updateProductList() {
         "<th>Adjust</th>\n" +
         "<th>Delete</th>\n" +
         "</tr>"
-    for (let i = 0; i < productListArray.length; i++) {
+    for (let i = 0; i < product.length; i++) {
         update += "<tr>\n" +
             "<td>" + i + 1 + "</td>\n" +
-            "<td>" + productListArray[i].id + "</td>\n" +
-            "<td>" + productListArray[i].name + "</td>\n" +
-            "<td>" + productListArray[i].price + "</td>\n" +
+            "<td>" + productArray[i].id + "</td>\n" +
+            "<td>" + productArray[i].name + "</td>\n" +
+            "<td>" + productArray[i].price + "</td>\n" +
             "<td><button onclick='adjustProduct(" + i + ")'>Adjust</button></td>\n" +
             "<td><button onclick='deleteProduct(" + i + ")'>Delete</button></td>\n" +
             "</tr>"
@@ -47,7 +47,7 @@ function updateProductList() {
 function addNewProduct() {
     if (id.value !== "" && name.value !== "" && price.value !== "") {
         let newProduct = new Product(id.value, name.value, price.value);
-        productListArray.push(newProduct);
+        productArray.push(newProduct);
     } else {
         alert(`Please fill all the information`);
     }
@@ -57,13 +57,13 @@ function addNewProduct() {
 function adjustProduct(index) {
     let nameAdjust = prompt(`Please enter new ID`);
     let priceAdjust = prompt(`Please enter new price`);
-    productListArray[index].setName(nameAdjust);
-    productListArray[index].setPrice(priceAdjust);
+    productArray[index].setName(nameAdjust);
+    productArray[index].setPrice(priceAdjust);
     updateProductList();
 }
 
 function deleteProduct(index) {
-    productListArray.splice(index, 1);
+    productArray.splice(index, 1);
     updateProductList();
 }
 
@@ -72,4 +72,4 @@ let productList = document.getElementById("productList");
 let id = document.getElementById("id");
 let name = document.getElementById("name");
 let price = document.getElementById("price");
-let productListArray = [];
+let productArray = [];
