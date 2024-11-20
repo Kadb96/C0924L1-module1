@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<h1>Quản lý công nhân</h1>
+<table id="workerTable">
+</table>
+<script>
+    class Worker {
+        constructor(id, name, birthday, address, salary, position) {
+            this.id = id;
+            this.name = name;
+            this.birthday = birthday;
+            this.address = address;
+            this.salary = salary
+            this.position = position;
+        }
+    }
+
+    let workerArray = [];
+    let worker1 = new Worker(1, "Trương Tấn A", "11-11-1997", "Quảng Nam", 2000, "Abc");
+    workerArray.push(worker1);
+    let worker3 = new Worker(3, "Trương Tấn C", "11-11-1999", "Huế", 2000, "Abc");
+    workerArray.push(worker3);
+    let worker2 = new Worker(2, "Trương Tấn B", "11-11-1998", "Đà Nẵng", 2000, "Abc");
+    workerArray.push(worker2);
+    workerArray = workerArray.sort((a, b) => a.name.localeCompare(b.name));
+    console.log(workerArray);
+    let workerTableData = "<tr>" +
+            "<th>STT</th>\n" +
+            "<th>Họ và tên</th>\n" +
+            "<th>Ngày sinh</th>\n" +
+            "<th>Địa chỉ</th>\n" +
+            "<th>Lương</th>\n" +
+            "<th>Chức vụ</th>\n" +
+            "</tr>";
+    for (let i = 0; i < workerArray.length; i++) {
+        workerTableData += "<tr>" +
+                "<td>" + workerArray[i].id + "</td>\n" +
+                "<td>" + workerArray[i].name + "</td>\n" +
+                "<td>" + workerArray[i].birthday + "</td>\n" +
+                "<td>" + workerArray[i].address + "</td>\n" +
+                "<td>" + workerArray[i].salary + "</td>\n" +
+                "<td>" + workerArray[i].position + "</td>\n" +
+                "</tr>";
+    }
+    let workerTable = document.getElementById("workerTable");
+    workerTable.innerHTML = workerTableData;
+</script>
+</body>
+</html>

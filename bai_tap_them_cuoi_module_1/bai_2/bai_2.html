@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorten</title>
+</head>
+<body>
+<script>
+    function shorten(str) {
+        let arr = str.split(" ");
+        if (arr.length === 1) {
+            document.write(`Chuỗi chỉ có 1 từ nên không cần viết tắt` + "<br>");
+        } else {
+            let shorten = "";
+            for (let i = 0; i < arr.length; i++) {
+                shorten += arr[i][0];
+            }
+            document.write(shorten.toUpperCase());
+        }
+    }
+
+    let str = prompt(`Input String`);
+    shorten(str);
+</script>
+</body>
+</html>
