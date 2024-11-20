@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    function isMonthValid(month) {
+        if (isNaN(month) || month.length !== 2) {
+            return false;
+        } else if (month % 1 !== 0) {
+            return false;
+        } else if (month < 1 || month > 12) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function isYearValid(year) {
+        if (isNaN(year) || year.length !== 4) {
+            return false;
+        } else if (year % 1 !== 0) {
+            return false;
+        } else if (year < 1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function daysOfMonth() {
+        let monthAndYear = prompt(`Hãy nhập tháng và năm`);
+        let monthAndYearArray = monthAndYear.split("/");
+        while (monthAndYearArray.length !== 2 || !isMonthValid(monthAndYearArray[0]) || !isYearValid(monthAndYearArray[1])) {
+            alert(`Tháng và năm định dạng mm/yyyy`);
+            monthAndYear = prompt(`Hãy nhập tháng và năm`);
+            monthAndYearArray = monthAndYear.split("/");
+        }
+        let isLeapYear;
+        if (monthAndYearArray[1] % 400 === 0) {
+            isLeapYear = true;
+        } else if (monthAndYearArray[1] % 100 === 0) {
+            isLeapYear = false;
+        } else if (monthAndYearArray[1] % 4 === 0) {
+            isLeapYear = true;
+        }
+        let daysOfMonth;
+        if (monthAndYearArray[0] == 2 && isLeapYear) {
+            daysOfMonth = 29;
+        } else if (monthAndYearArray[0] == 2 && !isLeapYear) {
+            daysOfMonth = 28;
+        } else if (monthAndYearArray[0] == 4 || monthAndYearArray[0] == 6 || monthAndYearArray[0] == 9 || monthAndYearArray[0] == 11) {
+            daysOfMonth = 30;
+        } else {
+            daysOfMonth = 31;
+        }
+        document.write(`Tháng ${monthAndYear} có ${daysOfMonth} ngày`);
+    }
+    daysOfMonth();
+</script>
+</body>
+</html>

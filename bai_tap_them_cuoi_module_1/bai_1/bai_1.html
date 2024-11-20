@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 And 5</title>
+</head>
+<body>
+<script>
+    // nhập độ dài chuỗi <= 50
+    let lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    while (isNaN(lengthOfArr) || lengthOfArr <= 0 || lengthOfArr > 50) {
+        alert(`Độ dài của chuỗi phải là một sô nguyên dương nhỏ hơn hoặc bằng 50`);
+        lengthOfArr = +prompt(`Nhập độ dài của chuỗi`);
+    }
+    // nhập mảng từ bàn phím
+    let arr = new Array(lengthOfArr);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        while (isNaN(arr[i])) {
+            alert(`Hãy nhập một số nguyên`);
+            arr[i] = +prompt(`Nhập số nguyên thứ ${i + 1} của chuỗi`);
+        }
+    }
+    // hiển thị
+    document.write(arr+ "<br>");
+    let newArr = arr.filter((e, i) => ((e % 5 === 0) && ((i+1) % 3 === 0)));
+    let total = newArr.reduce((a, b) => a + b);
+    let average = total / newArr.length;
+    document.write(average);
+</script>
+</body>
+</html>

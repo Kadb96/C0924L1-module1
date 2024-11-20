@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    function isPerfect(numb) {
+        let divisors = [];
+        for (let i = 1; i < numb; i++) {
+            if (numb % i === 0) {
+                divisors.push(i);
+            }
+        }
+        let totalOfDivisors = divisors.reduce((a, b) => a + b);
+        if (totalOfDivisors === numb) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    document.write(`Số 6 là số hoàn hảo: ${isPerfect(6)}<br>`);
+    document.write(`Số 9 là số hoàn hảo: ${isPerfect(9)}<br>`);
+    document.write(`Số 28 là số hoàn hảo: ${isPerfect(28)}<br>`);
+</script>
+</body>
+</html>
